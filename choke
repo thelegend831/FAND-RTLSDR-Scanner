@@ -1,0 +1,6 @@
+get-host;
+get-acl;
+merge
+get-command
+initgit
+var gsm=openSignal;
