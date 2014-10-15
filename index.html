@@ -1,0 +1,195 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Fand-rtlsdr-scanner</title>
+  <meta name="description" content="A cross platform Python frequency scanning GUI for the OsmoSDR rtl-sdr library">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Fand-rtlsdr-scanner</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">A cross platform Python frequency scanning GUI for the OsmoSDR rtl-sdr library</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/thelegend831/FAND-RTLSDR-Scanner/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/thelegend831/FAND-RTLSDR-Scanner/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/thelegend831/FAND-RTLSDR-Scanner" class="code">View Fand-rtlsdr-scanner on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1>
+<a name="rtlsdr-scanner" class="anchor" href="#rtlsdr-scanner"><span class="octicon octicon-link"></span></a>RTLSDR Scanner</h1>
+
+<p>Copyright 2012 - 2014 Al Brown</p>
+
+<p>al [at] eartoearoak.com</p>
+
+<p>A cross platform Python frequency scanning GUI for the OsmoSDR rtl-sdr <a href="http://sdr.osmocom.org/trac/wiki/rtl-sdr">library</a>.</p>
+
+<p>More details can be found <a href="http://eartoearoak.com/software/rtlsdr-scanner">here</a>.</p>
+
+<p>A basic <a href="https://github.com/EarToEarOak/RTLSDR-Scanner/blob/master/doc/Manual.pdf?raw=true">user manual</a> is also available.</p>
+
+<p>Tested on:</p>
+
+<ul>
+<li>Windows 7 (x86 and x64)</li>
+<li>Windows 8.1 (x64)</li>
+<li>Windows XP (x86)</li>
+<li>Ubuntu 12.04 (x86)</li>
+<li>Ubuntu 12.10 (x64)</li>
+<li>Ubuntu 13.04 (x64)</li>
+<li>OS X Snow Leopard</li>
+<li>OS X Mountain Lion</li>
+</ul>
+
+<h2>
+<a name="installer" class="anchor" href="#installer"><span class="octicon octicon-link"></span></a>Installer</h2>
+
+<p>A Windows installer can be found on <a href="http://sourceforge.net/projects/rtlsdrscanner">SourceForge</a></p>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>
+<a href="http://www.python.org">Python 2.7</a> or greater</li>
+<li><a href="http://www.wxpython.org/">wxPython</a></li>
+<li><a href="http://matplotlib.org/">matplotlib</a></li>
+<li><a href="http://www.numpy.org/">numpy</a></li>
+<li><a href="https://pypi.python.org/pypi/Pillow/2.4.0">Pillow</a></li>
+<li><a href="http://sdr.osmocom.org/trac/wiki/rtl-sdr">rtlsdr</a></li>
+<li><a href="https://github.com/roger-/pyrtlsdr">pyrtlsdr</a></li>
+</ul>
+
+<p>To test for missing libraries run <code>rtlsdr_scan_diag.py</code></p>
+
+<p>Windows 64 bit modules can be found <a href="http://www.lfd.uci.edu/%7Egohlke/pythonlibs/">here</a></p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p><code>rtlsdr_scan [file]</code></p>
+
+<pre><code>file - optional saved scan file to load
+</code></pre>
+
+<p><strong>Main Window</strong></p>
+
+<ul>
+<li>
+<strong>Start</strong> - Scan start frequency</li>
+<li>
+<strong>Stop</strong> - Scan stop frequency</li>
+<li>
+<strong>Mode</strong> - Single or continuous scanning</li>
+<li>
+<strong>Dwell</strong> - Sampling time spent on each step</li>
+<li>
+<strong>FFT Size</strong> - FFT size, greater values result in higher analysis precision (with higher sizes dwell should be increased)</li>
+<li>
+<strong>Live update</strong> - Update the display on each step (caution only use with small scans and low dwell times)</li>
+<li>
+<strong>Grid</strong> - Show a grid on the scan</li>
+</ul>
+
+<p><strong>File Menu</strong></p>
+
+<ul>
+<li>
+<strong>Open...</strong> - Open a saved scan</li>
+<li>
+<strong>Save As...</strong> - Save a scan</li>
+<li>
+<strong>Export...</strong> - Export a scan to a CSV file</li>
+<li>
+<strong>Properties..</strong> - Scan information</li>
+</ul>
+
+<p><strong>Edit Menu</strong></p>
+
+<ul>
+<li>
+<strong>Preferences</strong> - Set dongle gain, calibration, Local Oscillator and the sample bands to use</li>
+</ul>
+
+<p><strong>Scan Menu</strong></p>
+
+<ul>
+<li>
+<strong>Start</strong> - Start a scan</li>
+<li>
+<strong>Stop</strong> - Stop a scan</li>
+</ul>
+
+<p><strong>Tools Menu</strong></p>
+
+<ul>
+<li>
+<strong>Compare</strong> - Compare two previously saved scans</li>
+<li>
+<strong>Auto Calibration</strong> - Perform a crude calibration of the dongle to a known signal (this should be a continuous, steady signal)</li>
+</ul>
+
+<h2>
+<a name="development" class="anchor" href="#development"><span class="octicon octicon-link"></span></a>Development</h2>
+
+<p>Add the environment variable 'rtlsdr_update_timestamp' to update the version time stamp.</p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.</p>
+
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.</p>
+
+<p>You should have received a copy of the GNU General Public License
+along with this program.  If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/thelegend831" class="avatar"><img src="https://avatars1.githubusercontent.com/u/7370714?v=2&amp;s=60" width="48" height="48"></a> <a href="https://github.com/thelegend831">thelegend831</a> maintains <a href="https://github.com/thelegend831/FAND-RTLSDR-Scanner">Fand-rtlsdr-scanner</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/thelegend831/FAND-RTLSDR-Scanner/tarball/master" class="tar">tar</a><a href="https://github.com/thelegend831/FAND-RTLSDR-Scanner/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>
